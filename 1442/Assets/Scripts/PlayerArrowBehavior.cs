@@ -1,6 +1,3 @@
-//That was the player controller code, here's the code for the player's arrows
-
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
