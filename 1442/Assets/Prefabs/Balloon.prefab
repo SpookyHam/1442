@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4093205184774429384}
   m_Layer: 0
   m_Name: Balloon
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,9 @@ MonoBehaviour:
   bombPos: {fileID: 0}
   player: {fileID: 3449300701732656145, guid: 3c7738065dc628947b8e864f971f2904, type: 3}
   speed: 4
+  interval: 3
   damage: 2
+  lowerLimit: 6
 --- !u!50 &4093205184774429384
 Rigidbody2D:
   serializedVersion: 4

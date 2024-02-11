@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: -3583312219695580639}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Untagged
+  m_TagString: Cannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,9 @@ MonoBehaviour:
   player: {fileID: 3449300701732656145, guid: 3c7738065dc628947b8e864f971f2904, type: 3}
   offset: 180
   speed: 8
+  interval: 1
   damage: 3
+  lowerLimit: 6
 --- !u!61 &2841887920316187786
 BoxCollider2D:
   m_ObjectHideFlags: 0

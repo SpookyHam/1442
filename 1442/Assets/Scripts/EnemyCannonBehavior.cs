@@ -10,7 +10,9 @@ public class EnemyCannonBehavior : MonoBehaviour
     private Rigidbody2D rb;
     public float offset = 180f;
     public float speed = .7f;
+    public float interval = 1f;
     public float damage = 3;
+    public float lowerLimit = 10;
     
 
     private float timer;
@@ -39,12 +41,17 @@ public class EnemyCannonBehavior : MonoBehaviour
         //Interval between shots
         timer += Time.deltaTime;
 
-        if(timer > 1)
+        if(timer > interval)
         {
             timer = 0;
             shoot();
         }
 
+        //Despawn after going past bottom of screen
+         if (transform.position.y < -lowerLimit)
+    {
+        Destroy(this.gameObject);
+    }
     }
 
     void shoot()

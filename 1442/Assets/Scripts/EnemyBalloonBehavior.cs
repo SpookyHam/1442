@@ -9,8 +9,10 @@ public class EnemyBalloonBehavior : MonoBehaviour
     public GameObject player;
     private Rigidbody2D rb;
     public float speed = .3f;
+    public float interval = 3f;
     private float timer;
     public float damage = 2;
+    public float lowerLimit = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +30,17 @@ public class EnemyBalloonBehavior : MonoBehaviour
         // Interval between shots
          timer += Time.deltaTime;
 
-          if(timer > 1)
+          if(timer > interval)
         {
             timer = 0;
             shoot();
         }
+
+        //Despawn after going to bottom of screen
+        if (transform.position.y < -lowerLimit)
+    {
+        Destroy(this.gameObject);
+    }
     }
 
     void shoot()
