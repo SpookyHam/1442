@@ -29,7 +29,7 @@ public class FireArrowBehavior : MonoBehaviour
 
          void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Balloon") || other.gameObject.CompareTag("Cannon"))
+        if(other.gameObject.CompareTag("Balloon") || other.gameObject.CompareTag("Cannon") || other.gameObject.CompareTag("Boss"))
         {
             Instantiate(blast, blastPos.position, Quaternion.identity);
             Destroy(this.gameObject);

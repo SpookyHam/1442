@@ -6,6 +6,7 @@ public class FireBlast : MonoBehaviour
 {
    public GameObject blast;
    public Transform blastPos;
+   public float damage = 5;
    
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,11 @@ public class FireBlast : MonoBehaviour
         else if(whatIHit.tag == "Balloon")
         {
             Destroy(whatIHit.gameObject);
+        }
+
+        else if(whatIHit.tag == "Boss")
+        {
+            whatIHit.GetComponent<BossBehavior>().bossHealth -= damage;
         }
 
         

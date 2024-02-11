@@ -13,6 +13,8 @@ public class EnemyCannonBehavior : MonoBehaviour
     public float interval = 1f;
     public float damage = 3;
     public float lowerLimit = 10;
+    public float horizontal = 0f;
+    public float vertical = -0.4f;
     
 
     private float timer;
@@ -30,7 +32,7 @@ public class EnemyCannonBehavior : MonoBehaviour
     void Update()
     {
        //Movement
-       transform.position += new Vector3(0f,-0.4f,0f) * Time.deltaTime * speed; 
+       transform.position += new Vector3(horizontal,vertical,0f) * Time.deltaTime * speed; 
        
         // Cannon faces player
         Vector3 direction = player.transform.position - transform.position;

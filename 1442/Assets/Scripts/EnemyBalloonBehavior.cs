@@ -13,6 +13,8 @@ public class EnemyBalloonBehavior : MonoBehaviour
     private float timer;
     public float damage = 2;
     public float lowerLimit = 10;
+    public float vertical = -0.5f;
+    public float horizontal = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class EnemyBalloonBehavior : MonoBehaviour
     {
 
         //movement
-        transform.Translate(new Vector3(0f, -0.5f, 0f) * Time.deltaTime * speed);
+        transform.Translate(new Vector3(horizontal, vertical, 0f) * Time.deltaTime * speed);
 
         // Interval between shots
          timer += Time.deltaTime;

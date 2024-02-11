@@ -40,6 +40,15 @@ public class IceBlast : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        else if(whatIHit.tag == "Boss")
+        {
+            whatIHit.GetComponent<BossBehavior>().interval1 *= 1.5f;
+            whatIHit.GetComponent<BossBehavior>().interval2 *= 1.5f;
+            whatIHit.GetComponent<BossBehavior>().speed *= .75f;
+            whatIHit.GetComponent<SpriteRenderer>().color = Color.blue;
+            Destroy(this.gameObject);
+        }
+
         
 
       
